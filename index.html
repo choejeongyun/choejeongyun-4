@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최정윤 부교수 | 동의대학교 디자인조형학과</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Editorial Serif + Modern Clean Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+KR:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            850: '#1c1917',
+                            950: '#0c0a09',
+                        },
+                        accent: {
+                            light: '#e2e8f0',
+                            gold: '#c5a059',
+                            titanium: '#94a3b8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Noto Serif KR"', 'serif'],
+                        display: ['"Cinzel"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Taste-Skill Inspired Typography & Micro Styles */
+        body {
+            background-color: #09090b;
+            color: #e4e4e7;
+            letter-spacing: -0.01em;
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+        .hairline-border {
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+        .hairline-border-b {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .noise-bg {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+    </style>
+</head>
+<body class="bg-[#09090b] text-zinc-300 font-sans antialiased selection:bg-zinc-100 selection:text-black">
+
+    <!-- Top Minimal Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#09090b]/80 border-b hairline-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#home" class="group flex items-center gap-4">
+                <div class="w-9 h-9 border border-zinc-700 font-display font-bold text-lg text-zinc-100 flex items-center justify-center group-hover:border-amber-400 group-hover:text-amber-400 transition-colors">
+                    C
+                </div>
+                <div>
+                    <span class="font-bold text-sm tracking-widest text-zinc-100 uppercase block font-display">Choe Jeong Yun</span>
+                    <span class="text-[11px] text-zinc-500 font-mono tracking-tight">Dong-Eui Univ. Assoc. Prof</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-wider text-zinc-400 uppercase">
+                <a href="#about" class="hover:text-zinc-100 transition-colors">About</a>
+                <a href="#teaching" class="hover:text-zinc-100 transition-colors">Curriculum</a>
+                <a href="#patents" class="hover:text-zinc-100 transition-colors">IP & Patents</a>
+                <a href="#experience" class="hover:text-zinc-100 transition-colors">Projects</a>
+                <a href="#exhibitions" class="hover:text-zinc-100 transition-colors">Archive</a>
+                <a href="#contact" class="px-4 py-2 border border-zinc-700 text-zinc-200 hover:bg-zinc-100 hover:text-black hover:border-zinc-100 transition-all font-mono text-[11px]">Lab Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn" class="md:hidden text-zinc-400 hover:text-white p-2" aria-label="Menu">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-b hairline-border bg-[#09090b] px-6 py-6 space-y-4">
+            <a href="#about" class="m-link block text-sm font-mono text-zinc-400 hover:text-white">/01 ABOUT</a>
+            <a href="#teaching" class="m-link block text-sm font-mono text-zinc-400 hover:text-white">/02 CURRICULUM</a>
+            <a href="#patents" class="m-link block text-sm font-mono text-zinc-400 hover:text-white">/03 IP & PATENTS</a>
+            <a href="#experience" class="m-link block text-sm font-mono text-zinc-400 hover:text-white">/04 PROJECTS</a>
+            <a href="#exhibitions" class="m-link block text-sm font-mono text-zinc-400 hover:text-white">/05 ARCHIVE</a>
+            <a href="#contact" class="m-link block text-sm font-mono text-amber-400 pt-2">/06 CONTACT LAB</a>
+        </div>
+    </header>
+
+    <!-- Editorial Hero Section -->
+    <section id="home" class="min-h-screen pt-32 pb-20 flex flex-col justify-between noise-bg relative border-b hairline-border">
+        <div class="max-w-7xl mx-auto px-6 w-full my-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+                
+                <div class="lg:col-span-8 space-y-8">
+                    <div class="inline-flex items-center gap-3 px-3 py-1 bg-zinc-900 border hairline-border text-amber-400/90 text-xs font-mono tracking-wider uppercase">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        Department of Design & Sculptural Arts
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-light text-zinc-100 tracking-tight leading-[1.15] text-balance">
+                        Metalsmithing Craft<br>
+                        <span class="italic font-normal text-zinc-400">&amp; Intellectual Property</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-zinc-400 max-w-2xl font-light leading-relaxed font-serif">
+                        최정윤 교수는 전통 금속조형디자인의 미학에 3D 스마트 피팅, 증강현실(AR), 디지털 트윈 및 지식재산(IP) 융합 기술을 접목하는 독창적인 산학 연구를 이끌고 있습니다.
+                    </p>
+
+                    <!-- Key High Level Stats -->
+                    <div class="pt-8 grid grid-cols-3 gap-6 max-w-lg border-t hairline-border font-mono">
+                        <div>
+                            <div class="text-3xl font-light text-zinc-100">80<span class="text-amber-400 text-sm font-sans">건</span></div>
+                            <div class="text-[11px] text-zinc-500 uppercase tracking-wider mt-1">특허 출원 및 등록</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-light text-zinc-100">10<span class="text-amber-400 text-sm font-sans">권+</span></div>
+                            <div class="text-[11px] text-zinc-500 uppercase tracking-wider mt-1">NCS 국가교재 집필</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-light text-zinc-100">20<span class="text-amber-400 text-sm font-sans">회+</span></div>
+                            <div class="text-[11px] text-zinc-500 uppercase tracking-wider mt-1">미술대전 및 수상</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Profile Card -->
+                <div class="lg:col-span-4">
+                    <div class="bg-zinc-900/60 border hairline-border p-8 backdrop-blur-sm space-y-6">
+                        <div class="space-y-2 border-b hairline-border pb-6">
+                            <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest block">Professor Profile</span>
+                            <h2 class="text-2xl font-serif font-semibold text-zinc-100">최정윤 <span class="text-sm font-sans font-normal text-zinc-400">부교수</span></h2>
+                            <p class="text-xs text-amber-400/90 font-mono">금속조형디자인 전공</p>
+                        </div>
+
+                        <div class="space-y-4 text-xs text-zinc-400 font-mono">
+                            <div class="flex items-start justify-between">
+                                <span class="text-zinc-600 uppercase">LOCATION</span>
+                                <span class="text-zinc-200 text-right">생활과학관 312호</span>
+                            </div>
+                            <div class="flex items-start justify-between">
+                                <span class="text-zinc-600 uppercase">TEL</span>
+                                <span class="text-zinc-200 font-sans">051-890-1398</span>
+                            </div>
+                            <div class="flex items-start justify-between">
+                                <span class="text-zinc-600 uppercase">EMAIL</span>
+                                <a href="mailto:sanha@deu.ac.kr" class="text-zinc-200 hover:text-amber-400 transition-colors font-sans underline underline-offset-4">sanha@deu.ac.kr</a>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="block text-center w-full py-3 bg-zinc-100 text-black font-semibold text-xs uppercase tracking-widest hover:bg-amber-400 transition-colors">
+                            Contact Research Lab
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full pt-12 flex justify-between items-center text-[11px] font-mono text-zinc-600">
+            <span>DONG-EUI UNIVERSITY</span>
+            <span class="hidden sm:inline">DESIGN &amp; SCULPTURAL ARTS</span>
+            <span>SCROLL DOWN ↓</span>
+        </div>
+    </section>
+
+    <!-- Academic Background & Board Section -->
+    <section id="about" class="py-24 border-b hairline-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b hairline-border">
+                <div>
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">/ 01 Academic Biography</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-zinc-100">학력 및 대외 활동</h2>
+                </div>
+                <p class="text-xs font-mono text-zinc-500 mt-4 md:mt-0">DONG-EUI UNIVERSITY FACULTY MEMBER</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Academic Degrees -->
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono text-zinc-400 uppercase tracking-wider pb-3 border-b hairline-border flex items-center justify-between">
+                        <span>Academic Degrees</span>
+                        <i class="fa-solid fa-graduation-cap text-zinc-600"></i>
+                    </h3>
+                    <ul class="space-y-6 text-sm">
+                        <li class="group">
+                            <span class="text-[11px] font-mono text-amber-400/80 block">DOCTOR OF PHILOSOPHY</span>
+                            <div class="font-serif font-medium text-zinc-200 text-base group-hover:text-amber-400 transition-colors">단국대학교 조형예술학과</div>
+                            <div class="text-xs text-zinc-500 mt-0.5">금속조형디자인 전공 박사</div>
+                        </li>
+                        <li class="group">
+                            <span class="text-[11px] font-mono text-zinc-500 block">MASTER OF FINE ARTS</span>
+                            <div class="font-serif font-medium text-zinc-200 text-base group-hover:text-amber-400 transition-colors">홍익대학교 금속조형디자인과</div>
+                            <div class="text-xs text-zinc-500 mt-0.5">석사 졸업</div>
+                        </li>
+                        <li class="group">
+                            <span class="text-[11px] font-mono text-zinc-500 block">BACHELOR OF FINE ARTS</span>
+                            <div class="font-serif font-medium text-zinc-200 text-base group-hover:text-amber-400 transition-colors">홍익대학교 금속조형디자인과</div>
+                            <div class="text-xs text-zinc-500 mt-0.5">학사 졸업</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Academic Societies -->
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono text-zinc-400 uppercase tracking-wider pb-3 border-b hairline-border flex items-center justify-between">
+                        <span>Academic Societies</span>
+                        <i class="fa-solid fa-bookmark text-zinc-600"></i>
+                    </h3>
+                    <ul class="space-y-4 text-xs font-mono">
+                        <li class="p-4 bg-zinc-900/40 border hairline-border hover:border-zinc-700 transition-colors">
+                            <div class="text-zinc-200 font-sans font-semibold text-sm">한국멀티미디어학회</div>
+                            <div class="text-zinc-500 mt-1">국제협력분과 일반이사</div>
+                        </li>
+                        <li class="p-4 bg-zinc-900/40 border hairline-border hover:border-zinc-700 transition-colors">
+                            <div class="text-zinc-200 font-sans font-semibold text-sm">(사)경기디자인협회</div>
+                            <div class="text-zinc-500 mt-1">디자인조형분과 이사</div>
+                        </li>
+                        <li class="p-4 bg-zinc-900/40 border hairline-border hover:border-zinc-700 transition-colors">
+                            <div class="text-zinc-200 font-sans font-semibold text-sm">(사)국제아트앤디자인협회</div>
+                            <div class="text-zinc-500 mt-1">이사</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Committees -->
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono text-zinc-400 uppercase tracking-wider pb-3 border-b hairline-border flex items-center justify-between">
+                        <span>Public Committees</span>
+                        <i class="fa-solid fa-landmark text-zinc-600"></i>
+                    </h3>
+                    <ul class="space-y-2.5 text-xs text-zinc-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-amber-400"></span>
+                            <span>울산광역시 옥외광고심의위원회 위원</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-amber-400"></span>
+                            <span>울산광역시 공공디자인 진흥위원회 위원</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-zinc-500">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span>
+                            <span>부산광역시 건축물 미술작품심의위원회 위원 역임</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-zinc-500">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span>
+                            <span>부산시 금정구·동래구·사상구 경관위원회 위원 역임</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-zinc-500">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span>
+                            <span>기장군 건축위원회 위원 역임</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-zinc-500">
+                            <span class="w-1.5 h-1.5 bg-zinc-700"></span>
+                            <span>김해시 도시개발공사 기술자문위원 역임</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Subjects -->
+    <section id="teaching" class="py-24 border-b hairline-border bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b hairline-border">
+                <div>
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">/ 02 Curriculum &amp; Courses</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-zinc-100">강의 및 교육 분야</h2>
+                </div>
+                <p class="text-xs font-mono text-zinc-500 mt-4 md:mt-0">DESIGN THEORY TO IP PRACTICES</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="p-6 bg-zinc-900/30 border hairline-border hover:border-zinc-700 transition-all group">
+                    <span class="text-[10px] font-mono text-zinc-500 block mb-3 uppercase">COURSE 01</span>
+                    <h4 class="text-lg font-serif font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors">장신구 렌더링 &amp; 기초</h4>
+                    <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">주얼리의 정밀 질감 표현, 세공 모델링 및 기초 아이디어 스케치 기법 교육</p>
+                </div>
+
+                <div class="p-6 bg-zinc-900/30 border hairline-border hover:border-zinc-700 transition-all group">
+                    <span class="text-[10px] font-mono text-zinc-500 block mb-3 uppercase">COURSE 02</span>
+                    <h4 class="text-lg font-serif font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors">3D 프린팅 &amp; CAD</h4>
+                    <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">주얼리 3D CAD 모델링, 디지털 왁스 출력 및 시제품 정밀 가공 프로세스</p>
+                </div>
+
+                <div class="p-6 bg-zinc-900/30 border hairline-border hover:border-zinc-700 transition-all group">
+                    <span class="text-[10px] font-mono text-zinc-500 block mb-3 uppercase">COURSE 03</span>
+                    <h4 class="text-lg font-serif font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors">발명특허의 세계 &amp; 특허출원 실전</h4>
+                    <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">디자인 아이디어의 지식재산권(IP) 권리화 및 실제 특허 출원 절차 지도</p>
+                </div>
+
+                <div class="p-6 bg-zinc-900/30 border hairline-border hover:border-zinc-700 transition-all group">
+                    <span class="text-[10px] font-mono text-zinc-500 block mb-3 uppercase">COURSE 04</span>
+                    <h4 class="text-lg font-serif font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors">디자인컨텐츠기획 &amp; 창업</h4>
+                    <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">창업 아이템 발굴, 특허 기반 상품화 전략 및 브랜드 콘텐츠 빌딩</p>
+                </div>
+
+                <div class="p-6 bg-zinc-900/30 border hairline-border hover:border-zinc-700 transition-all group">
+                    <span class="text-[10px] font-mono text-zinc-500 block mb-3 uppercase">COURSE 05</span>
+                    <h4 class="text-lg font-serif font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors">디자인 재료학 &amp; 마케팅</h4>
+                    <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">금속/귀금속 물성 이해 및 글로벌 주얼리 패션 시장의 트렌드 분석</p>
+                </div>
+
+                <div class="p-6 bg-zinc-900/30 border hairline-border hover:border-zinc-700 transition-all group">
+                    <span class="text-[10px] font-mono text-zinc-500 block mb-3 uppercase">COURSE 06</span>
+                    <h4 class="text-lg font-serif font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors">색채학 (Color Theory)</h4>
+                    <p class="text-xs text-slate-400 mt-2 font-light leading-relaxed">조형 배색 원리, 디지털 색채 조율 및 실무 디자인 적용을 위한 연구</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Patents & IP Portfolio -->
+    <section id="patents" class="py-24 border-b hairline-border">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 pb-6 border-b hairline-border gap-6">
+                <div>
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">/ 03 Intellectual Property</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-zinc-100">주요 등록 특허 &amp; IP 실적</h2>
+                </div>
+
+                <!-- Interactive Filter Tabs -->
+                <div id="patent-filters" class="flex flex-wrap gap-2 text-xs font-mono">
+                    <button data-filter="all" class="patent-tab px-3 py-1.5 bg-zinc-100 text-black font-semibold uppercase">ALL (80)</button>
+                    <button data-filter="ar" class="patent-tab px-3 py-1.5 bg-zinc-900 text-zinc-400 hover:text-white border hairline-border uppercase">AR/Fitting</button>
+                    <button data-filter="fashion" class="patent-tab px-3 py-1.5 bg-zinc-900 text-zinc-400 hover:text-white border hairline-border uppercase">Fashion AI</button>
+                    <button data-filter="tech" class="patent-tab px-3 py-1.5 bg-zinc-900 text-zinc-400 hover:text-white border hairline-border uppercase">Smart Tech</button>
+                </div>
+            </div>
+
+            <!-- Patent Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="patent-grid">
+                
+                <!-- Patent Item -->
+                <div class="patent-card ar p-6 bg-zinc-900/50 border hairline-border flex flex-col justify-between hover:border-amber-400/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 bg-amber-400/10 text-amber-400 border border-amber-400/30">PATENT REGISTERED</span>
+                            <span class="text-zinc-500">10-2140555</span>
+                        </div>
+                        <h3 class="font-serif font-semibold text-zinc-100 text-base leading-snug mb-3">
+                            주얼리의 가상 착용 방법 및 시스템
+                        </h3>
+                        <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                            증강현실(AR) 기반 3D 주얼리 실시간 가상 착용 시뮬레이션 및 피팅 엔진 기술
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t hairline-border text-[11px] font-mono text-zinc-500 flex justify-between">
+                        <span>특허청 등록</span>
+                        <span>AR / Jewelry Tech</span>
+                    </div>
+                </div>
+
+                <!-- Patent Item -->
+                <div class="patent-card fashion p-6 bg-zinc-900/50 border hairline-border flex flex-col justify-between hover:border-amber-400/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 bg-amber-400/10 text-amber-400 border border-amber-400/30">PATENT REGISTERED</span>
+                            <span class="text-zinc-500">10-1949770</span>
+                        </div>
+                        <h3 class="font-serif font-semibold text-zinc-100 text-base leading-snug mb-3">
+                            맞춤 의류 추천을 위한 체형 정보를 추정하는 방법 및 시스템
+                        </h3>
+                        <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                            디지털 트윈 및 AI 알고리즘을 활용한 맞춤 체형 분석 알고리즘
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t hairline-border text-[11px] font-mono text-zinc-500 flex justify-between">
+                        <span>특허청 등록</span>
+                        <span>Fashion AI</span>
+                    </div>
+                </div>
+
+                <!-- Patent Item -->
+                <div class="patent-card ar p-6 bg-zinc-900/50 border hairline-border flex flex-col justify-between hover:border-amber-400/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 bg-amber-400/10 text-amber-400 border border-amber-400/30">PATENT REGISTERED</span>
+                            <span class="text-zinc-500">10-2163378</span>
+                        </div>
+                        <h3 class="font-serif font-semibold text-zinc-100 text-base leading-snug mb-3">
+                            디지털 트윈 및 증강현실을 이용한 피팅 이미지 제공방법
+                        </h3>
+                        <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                            스마트 거울 및 증강현실 디스플레이 상의 실시간 맞춤 피팅 시각화
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t hairline-border text-[11px] font-mono text-zinc-500 flex justify-between">
+                        <span>특허청 등록</span>
+                        <span>Digital Twin / AR</span>
+                    </div>
+                </div>
+
+                <!-- Patent Item -->
+                <div class="patent-card fashion p-6 bg-zinc-900/50 border hairline-border flex flex-col justify-between hover:border-amber-400/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 bg-amber-400/10 text-amber-400 border border-amber-400/30">PATENT REGISTERED</span>
+                            <span class="text-zinc-500">10-2093328</span>
+                        </div>
+                        <h3 class="font-serif font-semibold text-zinc-100 text-base leading-snug mb-3">
+                            사용자 사진의 의류 및 환경 정보를 이용한 의류 추천 시스템
+                        </h3>
+                        <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                            이미지 빅데이터 및 착용 환경 메타데이터 분석 기반의 스마트 추천
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t hairline-border text-[11px] font-mono text-zinc-500 flex justify-between">
+                        <span>특허청 등록</span>
+                        <span>Big Data &amp; AI</span>
+                    </div>
+                </div>
+
+                <!-- Patent Item -->
+                <div class="patent-card ar p-6 bg-zinc-900/50 border hairline-border flex flex-col justify-between hover:border-amber-400/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 bg-amber-400/10 text-amber-400 border border-amber-400/30">PATENT REGISTERED</span>
+                            <span class="text-zinc-500">10-2163372</span>
+                        </div>
+                        <h3 class="font-serif font-semibold text-zinc-100 text-base leading-snug mb-3">
+                            미러 디스플레이 및 증강현실을 이용한 피팅 이미지 제공방법
+                        </h3>
+                        <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                            상업 공간용 스마트 오프라인 미러 하드웨어 연동 인터페이스
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t hairline-border text-[11px] font-mono text-zinc-500 flex justify-between">
+                        <span>특허청 등록</span>
+                        <span>Smart Mirror</span>
+                    </div>
+                </div>
+
+                <!-- Patent Item -->
+                <div class="patent-card tech p-6 bg-zinc-900/50 border hairline-border flex flex-col justify-between hover:border-amber-400/50 transition-colors">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 bg-amber-400/10 text-amber-400 border border-amber-400/30">PATENT REGISTERED</span>
+                            <span class="text-zinc-500">10-2138215</span>
+                        </div>
+                        <h3 class="font-serif font-semibold text-zinc-100 text-base leading-snug mb-3">
+                            단말기 상에서 체형 정보 입력 및 가상 의류 착용 시스템
+                        </h3>
+                        <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                            모바일 터치 UI 기반 간편 사용자 체형 모델링 솔루션
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t hairline-border text-[11px] font-mono text-zinc-500 flex justify-between">
+                        <span>특허청 등록</span>
+                        <span>Mobile UX/UI</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-xs font-mono text-zinc-500">
+                    * 특허등록 26건 및 특허출원 54건 포함 총 80건 보유 (가상 의류 예측 시스템 10-2129820 외)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry & Academic Projects -->
+    <section id="experience" class="py-24 border-b hairline-border bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b hairline-border">
+                <div>
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">/ 04 Industry Projects</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-zinc-100">산학협력 및 책임 연구 실적</h2>
+                </div>
+                <p class="text-xs font-mono text-zinc-500 mt-4 md:mt-0">RESEARCH &amp; CONSULTING ARCHIVE</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- Project Strip -->
+                <div class="p-6 bg-zinc-900/40 border hairline-border hover:border-zinc-600 transition-colors flex flex-col md:flex-row justify-between md:items-center gap-4">
+                    <div class="space-y-1">
+                        <span class="text-[11px] font-mono text-amber-400 uppercase">특허청 정부 과제</span>
+                        <h3 class="text-lg font-serif font-semibold text-zinc-100">신산업 분야 지식재산 융합인재 양성사업</h3>
+                        <p class="text-xs text-zinc-400">참여 교수 | 지식재산(IP) 기반 융합 디자인 인재 육성</p>
+                    </div>
+                    <div class="text-xs font-mono text-zinc-500 shrink-0">KIPO PROJECT</div>
+                </div>
+
+                <!-- Project Strip -->
+                <div class="p-6 bg-zinc-900/40 border hairline-border hover:border-zinc-600 transition-colors flex flex-col md:flex-row justify-between md:items-center gap-4">
+                    <div class="space-y-1">
+                        <span class="text-[11px] font-mono text-zinc-500 uppercase">글로벌 기업 자문</span>
+                        <h3 class="text-lg font-serif font-semibold text-zinc-100">Mercedes-Benz Sprinter Interior Design 자문</h3>
+                        <p class="text-xs text-zinc-400">자문 위원 | (주)한국시스템 고급 모빌리티 인테리어 조형 컨설팅</p>
+                    </div>
+                    <div class="text-xs font-mono text-zinc-500 shrink-0">AUTOMOTIVE DESIGN</div>
+                </div>
+
+                <!-- Project Strip -->
+                <div class="p-6 bg-zinc-900/40 border hairline-border hover:border-zinc-600 transition-colors flex flex-col md:flex-row justify-between md:items-center gap-4">
+                    <div class="space-y-1">
+                        <span class="text-[11px] font-mono text-zinc-500 uppercase">중소벤처기업부 과제</span>
+                        <h3 class="text-lg font-serif font-semibold text-zinc-100">메타데이터 기반 모바일 공간플래너 &amp; 커머스 플랫폼 개발</h3>
+                        <p class="text-xs text-zinc-400">책임연구원 | 홈퍼니싱 공간 매칭 및 스마트 인터페이스 구현</p>
+                    </div>
+                    <div class="text-xs font-mono text-zinc-500 shrink-0">MSS PROJECT</div>
+                </div>
+
+                <!-- Project Strip -->
+                <div class="p-6 bg-zinc-900/40 border hairline-border hover:border-zinc-600 transition-colors flex flex-col md:flex-row justify-between md:items-center gap-4">
+                    <div class="space-y-1">
+                        <span class="text-[11px] font-mono text-zinc-500 uppercase">LINC+ 사업단 연구</span>
+                        <h3 class="text-lg font-serif font-semibold text-zinc-100">노즐형 자동차 엔진룸 자동 소화 시스템 개발</h3>
+                        <p class="text-xs text-zinc-400">책임연구원 | 운전자 안전용 소화 기구 기량 및 메커니즘 디자인</p>
+                    </div>
+                    <div class="text-xs font-mono text-zinc-500 shrink-0">PRODUCT SAFETY</div>
+                </div>
+
+                <!-- Project Strip -->
+                <div class="p-6 bg-zinc-900/40 border hairline-border hover:border-zinc-600 transition-colors flex flex-col md:flex-row justify-between md:items-center gap-4">
+                    <div class="space-y-1">
+                        <span class="text-[11px] font-mono text-zinc-500 uppercase">산학 디자인 컨설팅</span>
+                        <h3 class="text-lg font-serif font-semibold text-zinc-100">오투랩, 바로수, 자연지애 화장품, 플라즈마 마사지기 디자인 자문</h3>
+                        <p class="text-xs text-zinc-400">책임연구원 | BI 구축, 제품 아이덴티티 확립 및 패키지 브랜딩</p>
+                    </div>
+                    <div class="text-xs font-mono text-zinc-500 shrink-0">BRAND IDENTITY</div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 p-6 bg-zinc-900/20 border hairline-border">
+                <span class="text-xs font-mono text-amber-400 uppercase block mb-1">Previous Teaching Experience</span>
+                <p class="text-xs text-zinc-400 leading-relaxed font-mono">
+                    강동대학교 산학협력 중점교원 역임 | 단국대, 용인대, 공주대, 신라대 대학원, 인천재능대, 여주대, 동서울대, 국제대, 서일대 외래교수 역임
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibitions, Books & Honors Section -->
+    <section id="exhibitions" class="py-24 border-b hairline-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b hairline-border">
+                <div>
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">/ 05 Exhibitions &amp; Publications</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-zinc-100">전시, 저서 및 수상 내역</h2>
+                </div>
+                <p class="text-xs font-mono text-zinc-500 mt-4 md:mt-0">CREATIVE WORKS ARCHIVE</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <!-- Exhibitions -->
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono text-zinc-400 uppercase tracking-wider pb-3 border-b hairline-border">
+                        International Exhibitions
+                    </h3>
+                    <ul class="space-y-4 text-xs font-mono text-zinc-300">
+                        <li class="p-4 bg-zinc-900/30 border hairline-border">
+                            <span class="text-amber-400 font-semibold block mb-1">SHENYANG, CHINA</span>
+                            <div class="text-sm font-serif font-medium text-zinc-100">Choe Jeong Yun Solo Exhibition</div>
+                            <div class="text-zinc-500 mt-1">Gallery in Shenyang Aerospace University</div>
+                        </li>
+                        <li class="p-4 bg-zinc-900/30 border hairline-border">
+                            <span class="text-amber-400 font-semibold block mb-1">FLANDERS, BELGIUM</span>
+                            <div class="text-sm font-serif font-medium text-zinc-100">Blooming Flower &amp; Invited Art Fair</div>
+                            <div class="text-zinc-500 mt-1">Flanders Expo, Belgium</div>
+                        </li>
+                        <li class="p-4 bg-zinc-900/30 border hairline-border">
+                            <span class="text-amber-400 font-semibold block mb-1">NEW YORK &amp; HAWAII, USA</span>
+                            <div class="text-sm font-serif font-medium text-zinc-100">Invited International Exhibition</div>
+                            <div class="text-zinc-500 mt-1">Jacob K. Javits Center / Honolulu Downtown Art Center</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- NCS Books -->
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono text-zinc-400 uppercase tracking-wider pb-3 border-b hairline-border">
+                        NCS Books (공저)
+                    </h3>
+                    <div class="grid grid-cols-1 gap-2 text-xs font-mono text-zinc-400">
+                        <div class="p-3 bg-zinc-900/40 border hairline-border">• 귀금속 연마 (교육부 NCS 교재)</div>
+                        <div class="p-3 bg-zinc-900/40 border hairline-border">• 귀금속 제품생산기획 및 출고관리</div>
+                        <div class="p-3 bg-zinc-900/40 border hairline-border">• 귀금속 세공 &amp; 왁스카빙</div>
+                        <div class="p-3 bg-zinc-900/40 border hairline-border">• 주얼리 3D CAD 모델링</div>
+                        <div class="p-3 bg-zinc-900/40 border hairline-border">• 귀금속 주조 &amp; 조립 가공</div>
+                        <div class="p-3 bg-zinc-900/40 border hairline-border">• 귀금속 조각 &amp; 도금 &amp; 안전관리</div>
+                    </div>
+                </div>
+
+                <!-- Awards -->
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono text-zinc-400 uppercase tracking-wider pb-3 border-b hairline-border">
+                        Honors &amp; Awards
+                    </h3>
+                    <ul class="space-y-3 text-xs">
+                        <li class="p-4 bg-zinc-900/30 border hairline-border">
+                            <span class="text-amber-400 font-mono block text-[10px]">GRAND PRIZE &amp; AWARDS</span>
+                            <div class="text-sm font-serif font-semibold text-zinc-100 mt-0.5">대한민국미술대전 등 20회 수상</div>
+                        </li>
+                        <li class="p-4 bg-zinc-900/30 border hairline-border">
+                            <span class="text-zinc-500 font-mono block text-[10px]">ACADEMIC AWARD</span>
+                            <div class="text-sm font-serif font-semibold text-zinc-100 mt-0.5">한국멀티미디어학회 학술공로상</div>
+                        </li>
+                        <li class="p-4 bg-zinc-900/30 border hairline-border">
+                            <span class="text-zinc-500 font-mono block text-[10px]">GOVERNMENT COMMENDATION</span>
+                            <div class="text-sm font-serif font-semibold text-zinc-100 mt-0.5">부산지방중소벤처기업청 우수교류 표창</div>
+                        </li>
+                        <li class="p-4 bg-zinc-900/30 border hairline-border">
+                            <span class="text-zinc-500 font-mono block text-[10px]">ASSOCIATION COMMENDATION</span>
+                            <div class="text-sm font-serif font-semibold text-zinc-100 mt-0.5">중소기업융합부산연합회 감사패</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab & Contact -->
+    <section id="contact" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-6 space-y-8">
+                    <div>
+                        <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">/ 06 Get in Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif text-zinc-100">동의대학교 최정윤 교수 연구실</h2>
+                    </div>
+
+                    <p class="text-sm text-zinc-400 leading-relaxed font-serif font-light">
+                        금속조형디자인, 주얼리 3D CAD/AR 피팅 기술, 지식재산(IP) 융합 분야의 상담 및 산학협력 프로젝트 문의는 아래 연락처로 접수해 주시기 바랍니다.
+                    </p>
+
+                    <div class="space-y-4 text-xs font-mono">
+                        <div class="p-5 bg-zinc-900/60 border hairline-border flex items-center gap-4">
+                            <i class="fa-solid fa-location-dot text-amber-400 text-lg w-6 text-center"></i>
+                            <div>
+                                <div class="text-zinc-500 text-[10px]">LAB LOCATION</div>
+                                <div class="text-zinc-200 text-sm font-sans mt-0.5">동의대학교 생활과학관 312호</div>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-zinc-900/60 border hairline-border flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-amber-400 text-lg w-6 text-center"></i>
+                            <div>
+                                <div class="text-zinc-500 text-[10px]">TELEPHONE</div>
+                                <div class="text-zinc-200 text-sm font-sans mt-0.5">051-890-1398</div>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-zinc-900/60 border hairline-border flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-amber-400 text-lg w-6 text-center"></i>
+                            <div>
+                                <div class="text-zinc-500 text-[10px]">E-MAIL ADDRESS</div>
+                                <a href="mailto:sanha@deu.ac.kr" class="text-zinc-200 text-sm font-sans hover:text-amber-400 transition-colors mt-0.5 block">sanha@deu.ac.kr</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Box -->
+                <div class="lg:col-span-6 bg-zinc-900/40 border hairline-border p-8">
+                    <h3 class="text-lg font-serif font-semibold text-zinc-100 mb-2">연구실 문의 메시지</h3>
+                    <p class="text-xs text-zinc-500 font-mono mb-6">Inquiry &amp; Academic Collaboration</p>
+
+                    <form onsubmit="event.preventDefault(); const msgBox = document.getElementById('form-feedback'); msgBox.classList.remove('hidden'); this.reset();" class="space-y-4">
+                        <div>
+                            <label class="block text-[11px] font-mono text-zinc-400 uppercase mb-1">성함 및 소속</label>
+                            <input type="text" required placeholder="홍길동 (동의대학교 학생 / ㈜OO디자인)" class="w-full px-4 py-3 bg-zinc-950 border hairline-border text-zinc-100 text-xs focus:outline-none focus:border-amber-400 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-mono text-zinc-400 uppercase mb-1">이메일 주소</label>
+                            <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-3 bg-zinc-950 border hairline-border text-zinc-100 text-xs focus:outline-none focus:border-amber-400 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-mono text-zinc-400 uppercase mb-1">문의 및 상담 내용</label>
+                            <textarea rows="4" required placeholder="상담받고자 하시는 내용을 간단히 기재해 주세요." class="w-full px-4 py-3 bg-zinc-950 border hairline-border text-zinc-100 text-xs focus:outline-none focus:border-amber-400 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 bg-zinc-100 text-black font-mono font-semibold text-xs uppercase tracking-widest hover:bg-amber-400 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div id="form-feedback" class="hidden mt-4 p-3 bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono text-center">
+                        ✓ 메시지가 성공적으로 전송되었습니다.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-[#09090b] border-t hairline-border text-xs font-mono text-zinc-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <div>
+                <p>© Dong-Eui University. Department of Design &amp; Sculptural Arts.</p>
+                <p class="text-[11px] text-zinc-700 mt-0.5">최정윤 교수 연구실 | 동의대학교 생활과학관 312호</p>
+            </div>
+            <a href="#home" class="text-zinc-400 hover:text-amber-400 transition-colors">BACK TO TOP ↑</a>
+        </div>
+    </footer>
+
+    <!-- Interactive Filter Script & Mobile Menu -->
+    <script>
+        // Patent Filter Logic
+        const tabs = document.querySelectorAll('.patent-tab');
+        const cards = document.querySelectorAll('.patent-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.getAttribute('data-filter');
+
+                tabs.forEach(t => {
+                    t.classList.remove('bg-zinc-100', 'text-black');
+                    t.classList.add('bg-zinc-900', 'text-zinc-400');
+                });
+                tab.classList.remove('bg-zinc-900', 'text-zinc-400');
+                tab.classList.add('bg-zinc-100', 'text-black');
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(filter)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mLinks = document.querySelectorAll('.m-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
